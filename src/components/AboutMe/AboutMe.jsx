@@ -11,12 +11,27 @@ const AboutMe = () => {
       header: "Education",
       obj: [
         {
-          title: ["Computer Science - B.Sc."],
+          title: "Computer Science - B.Sc.",
           text: "The Bonch-Bruevich Saint Petersburg State University of Telecommunications, Information systems and technology",
         },
+      ],
+    },
+    {
+      header: "Skills",
+      obj: [
         {
-          title: ["Computer Science - B.Sc."],
-          text: "The Bonch-Bruevich Saint Petersburg State University of Telecommunications, Information systems and technology",
+          title: "Web",
+          text: " HTML5, CSS (Sass), JavaScript (React, Redux, Flux), Rest APIs, Node JS, Databases (SQL)",
+        },
+      ],
+    },
+    {
+      header: "Expirience",
+      obj: [
+        {
+          title:
+            "Co-Founder, Developer \n Startup programix.pro - programing school for kids",
+          text: "Platform development (HTML,JS,CSS,PHP) \n SEO optimization \n Setup WooCommerce",
         },
       ],
     },
@@ -40,24 +55,6 @@ const AboutMe = () => {
           {info.map((obj, index) => (
             <AboutMeElement key={index} {...obj} />
           ))}
-          <div className={styles.item}>
-            <div className={styles.item_header}>Skills</div>
-            <div className={styles.item_text}>
-              HTML5, CSS (Sass), JavaScript (React, Redux, Flux), Rest APIs,
-              Node JS, Databases (SQL)
-            </div>
-          </div>
-          <div className={styles.item}>
-            <div className={styles.item_header}>Expirience</div>
-            <div className={styles.item_title}>
-              Co-Founder, Developer <br /> Startup programix.pro - programing
-              school for kids
-            </div>
-            <div className={styles.item_text}>
-              Platform development (HTML,JS,CSS,PHP) <br /> SEO optimization
-              <br /> Setup WooCommerce
-            </div>
-          </div>
         </div>
       </motion.div>
     </>

@@ -12,7 +12,6 @@ function App() {
     <div className="wrapper">
       <div className="content">
         <Menu />
-
         <AnimatedRoutes />
         <Footer />
       </div>

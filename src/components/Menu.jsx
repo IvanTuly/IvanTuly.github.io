@@ -29,10 +29,6 @@ const Menu = () => {
       link: "/about",
     },
     {
-      name: "My skills",
-      link: "/skills",
-    },
-    {
       name: "Portfolio",
       link: "/portfolio",
     },
