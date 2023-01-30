@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Title = ({ title }) => {
   return (
     <div className="title">
-      <div className="title__title">"title"</div>
+      <div className="title__title">{`<title>`}</div>
       <motion.div
         className="title__info"
         initial={{ opacity: 0, x: 100 }}
@@ -18,7 +18,7 @@ const Title = ({ title }) => {
       >
         {title}
       </motion.div>
-      <div className="title__contact">- Contact me</div>
+      {/* <div className="title__contact">- Contact me</div> */}
     </div>
   );
 };

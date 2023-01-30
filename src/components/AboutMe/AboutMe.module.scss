@@ -1,0 +1,30 @@
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item {
+  border-bottom: 1px solid white;
+  width: 27vw;
+}
+
+.item_header {
+  color: #00c47c;
+  margin: 1.5vw 0;
+  font-size: 2vw;
+}
+
+.item_title {
+  font-size: 1.1vw;
+  line-height: 1.2vw;
+  font-weight: 600;
+  margin-bottom: 0.5vw;
+}
+
+.item_text {
+  margin-bottom: 1.5vw;
+  font-size: 1.1vw;
+  line-height: 1.2vw;
+  font-weight: 400;
+}

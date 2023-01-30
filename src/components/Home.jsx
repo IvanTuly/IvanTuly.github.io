@@ -5,7 +5,7 @@ import Title from "./Title";
 const Home = () => {
   return (
     <>
-      <Title title={`Hello, I'm Ivan`} />
+      <Title title={"Hello, \n I'm Ivan"} />
       <motion.div
         className="pageinfo"
         initial={{ opacity: 0, y: "100%" }}
