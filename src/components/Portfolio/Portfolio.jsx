@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 import Title from "../Title";
 import BtnSlider from "./Slider/BtnSlider";
+import Counter from "./Counter";
 
 const works = [
   {
@@ -98,6 +99,7 @@ const Portfolio = () => {
         </AnimatePresence>
         <BtnSlider moveSlide={nextSlide} direction={"next"} />
         <BtnSlider moveSlide={prevSlide} direction={"prev"} />
+        <Counter currentPage={slideIndex} totalPages={works.length} />
       </motion.div>
     </>
   );

@@ -6,7 +6,7 @@ import AboutMe from "./AboutMe/AboutMe";
 
 import { AnimatePresence } from "framer-motion";
 import Portfolio from "./Portfolio/Portfolio";
-import Contacts from "./Contacts";
+import Contacts from "./Contacts/Contacts";
 
 const AnimatedRoutes = () => {
   const location = useLocation();

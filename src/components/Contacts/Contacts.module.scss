@@ -1,0 +1,34 @@
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item {
+  width: 27vw;
+}
+
+.item_header {
+  color: #00c47c;
+  margin: 2.5vw 0;
+  font-size: 2vw;
+}
+
+.item_info {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2vw;
+  font-size: 1.2vw;
+  line-height: 1.2vw;
+  font-weight: 400;
+
+  .item_text {
+    margin-right: 0.5vw;
+  }
+
+  .item_linkName {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+  }
+}

@@ -107,14 +107,27 @@
   flex-direction: column;
   justify-content: end;
   padding: 0 0 10vh 0;
-  img {
-    border: 1px solid black;
-    border-radius: 50%;
-    width: 2.5vw;
-    height: 2.5vw;
-    padding: 2px;
-    object-fit: fill;
-    margin-bottom: 0.5vw;
+
+  &__item {
+    width: 3.5vw;
+    // height: 3.5vw;
+    // border-radius: 50%;
+    // border: 2px solid white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // justify-content: flex-start;
+
+    margin-bottom: 1vw;
+
+    cursor: pointer;
+
+    p {
+      font-size: 1vw;
+      font-weight: 400;
+      margin-left: 1vw;
+    }
   }
 }
 

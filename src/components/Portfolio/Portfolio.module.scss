@@ -1,0 +1,35 @@
+.btn_slide {
+  width: 2vw;
+  height: 2vw;
+
+  border: none;
+  position: absolute;
+
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.prev {
+  top: 2vw;
+  right: 3vw;
+}
+.next {
+  top: 2vw;
+  right: 1vw;
+}
+
+.page_counter {
+  display: flex;
+  position: absolute;
+  top: 2.3vw;
+  left: 1vw;
+
+  font-weight: 500;
+  font-size: 1.2vw;
+  letter-spacing: 5px;
+
+  .total_pages {
+    color: #42444d;
+  }
+}

@@ -4,7 +4,7 @@ import "./App.scss";
 import Menu from "./components/Menu";
 import Title from "./components/Title";
 
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 import AnimatedRoutes from "./components/AnimatedRoutes";
 
 function App() {
