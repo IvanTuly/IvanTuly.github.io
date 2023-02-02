@@ -11,6 +11,11 @@ function App() {
   return (
     <div className="wrapper">
       <div className="content">
+        <img
+          className="tuly_logo"
+          src={process.env.PUBLIC_URL + "/img/logoTuly.svg"}
+          alt="Code"
+        />
         <Menu />
         <AnimatedRoutes />
         <Footer />
