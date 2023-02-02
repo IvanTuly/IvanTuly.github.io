@@ -54,7 +54,7 @@ const Contacts = () => {
         exit={{ opacity: 0, y: "-100%" }}
         transition={{
           type: "tween",
-          duration: 0.5,
+          duration: 0.3,
           ease: "easeInOut",
         }}
       >

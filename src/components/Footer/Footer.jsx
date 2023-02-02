@@ -5,22 +5,22 @@ import FooterItem from "./FooterItem";
 const footerItems = [
   {
     icon: "github",
-    link: "https://google.com",
+    link: "https://github.com/IvanTuly",
     name: "github",
   },
   {
     icon: "linkedin",
-    link: "https://google.com",
+    link: "https://www.linkedin.com/in/ivan-tulchinskii-28bb8821b/",
     name: "linkedin",
   },
   {
     icon: "whatsapp",
-    link: "https://google.com",
+    link: "https://wa.me/79112553010",
     name: "whatsapp",
   },
   {
     icon: "telegram",
-    link: "https://google.com",
+    link: "https://t.me/+79956303010",
     name: "telegram",
   },
 ];

@@ -7,13 +7,16 @@ const Home = () => {
     <>
       <Title title={"Hello, \n I'm Ivan"} />
       <motion.div
+        style={{
+          backgroundImage: `url('${process.env.PUBLIC_URL}/img/backGround1.png')`,
+        }}
         className="pageinfo"
         initial={{ opacity: 0, y: "100%" }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: "-100%" }}
         transition={{
           type: "tween",
-          duration: 0.5,
+          duration: 0.3,
           ease: "easeOut",
         }}
       >

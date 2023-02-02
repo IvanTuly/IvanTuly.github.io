@@ -4,7 +4,14 @@ import "boxicons";
 const FooterItem = ({ icon, link, name }) => {
   return (
     <div className="footer__item">
-      <box-icon type="logo" color="#ffffff" size="2.4vw" name={icon}></box-icon>
+      <a href={link} target="_blank" className="footer__link">
+        <box-icon
+          className="footer__icon"
+          type="logo"
+          color="#ffffff"
+          name={icon}
+        ></box-icon>
+      </a>
       {/* <p>{name}</p> */}
     </div>
   );

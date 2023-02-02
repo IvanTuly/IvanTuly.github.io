@@ -31,7 +31,11 @@ const AboutMe = () => {
         {
           title:
             "Co-Founder, Developer \n Startup programix.pro - programing school for kids",
-          text: "Platform development (HTML,JS,CSS,PHP) \n SEO optimization \n Setup WooCommerce",
+          text: "Platform development (HTML,JS,CSS,PHP) SEO optimization Setup WooCommerce",
+        },
+        {
+          title: "Web developer at sun arch dance school",
+          text: "Website support, adding new pages, SEO optimization",
         },
       ],
     },
@@ -47,7 +51,7 @@ const AboutMe = () => {
         exit={{ opacity: 0, y: "-100%" }}
         transition={{
           type: "tween",
-          duration: 0.5,
+          duration: 0.3,
           ease: "easeInOut",
         }}
       >

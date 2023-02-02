@@ -4,17 +4,48 @@ import { AnimatePresence } from "framer-motion";
 import Title from "../Title";
 import BtnSlider from "./Slider/BtnSlider";
 import Counter from "./Counter";
+import styles from "./Portfolio.module.scss";
 
 const works = [
   {
-    title: "React Sneakers",
-    description: "Sneakers store",
-    img: "https://www.highsnobiety.com/static-assets/thumbor/uCJJWDIKyfTH7j6GaVWGuHo0pGs=/1600x1067/www.highsnobiety.com/static-assets/wp-content/uploads/2018/10/24104723/best-sneaker-websites-upd-01.jpg",
+    titleImg: "/img/pizzaDelivery/title.svg",
+    projectImg: "/img/pizzaDelivery/mac.png",
+    backgroundImage: "/img/pizzaDelivery/background.png",
+    techStack: [
+      "ReactJS",
+      "Redux Toolkit",
+      "React Router",
+      "Axios",
+      "React Content Loader",
+      "React Pagination",
+      "Lodash.Debounce",
+      "Sass",
+    ],
   },
   {
-    title: "React Pizza",
-    description: "Pizza delivery",
-    img: "https://fireaway.co.uk/wp-content/uploads/2021/05/Layer-1.png",
+    titleImg: "/img/reactSneakers/title.svg",
+    projectImg: "/img/reactSneakers/mac.png",
+    backgroundImage: "/img/reactSneakers/background2.png",
+    techStack: [
+      "ReactJS",
+      "Redux Toolkit",
+      "React Router",
+      "Axios",
+      "React Content Loader",
+      "css-modules",
+    ],
+  },
+  {
+    titleImg: "/img/taskList/title.svg",
+    projectImg: "/img/taskList/mac.png",
+    backgroundImage: "/img/taskList/background.svg",
+    techStack: [
+      "Vanilla JS",
+      "Scss",
+      "Drag & Drop ",
+      "Firebase RealTime",
+      "Firebase Auth",
+    ],
   },
 ];
 
@@ -68,18 +99,24 @@ const Portfolio = () => {
     <>
       <Title title={"My, works"} />
       <motion.div
+        style={{
+          backgroundImage: `url(${
+            process.env.PUBLIC_URL + works[slideIndex - 1].backgroundImage
+          })`,
+        }}
         className="pageinfo"
         initial={{ opacity: 0, y: "100%" }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: "-100%" }}
         transition={{
           type: "tween",
-          duration: 0.5,
+          duration: 0.3,
           ease: "easeOut",
         }}
       >
         <AnimatePresence initial={false} exitBeforeEnter custom={direction}>
           <motion.div
+            className={styles.portfolioCard}
             variants={variants}
             initial="initial"
             animate="animate"
@@ -88,12 +125,21 @@ const Portfolio = () => {
             custom={direction}
             key={works[slideIndex - 1].img}
           >
-            <div>{works[slideIndex - 1].title}</div>
             <img
-              height={"150px"}
-              width={"150px"}
-              src={works[slideIndex - 1].img}
-              alt="work image"
+              className={styles.imageTitle}
+              src={process.env.PUBLIC_URL + works[slideIndex - 1].titleImg}
+              alt="Project title"
+            />
+            <div className={styles.subTitle}>Tech Stack:</div>
+            <div className={styles.techStack}>
+              {works[slideIndex - 1].techStack.map((item) => (
+                <div className={styles.techStackItem}>{item}</div>
+              ))}
+            </div>
+            <img
+              className={styles.imageMac}
+              src={process.env.PUBLIC_URL + works[slideIndex - 1].projectImg}
+              alt="Project image"
             />
           </motion.div>
         </AnimatePresence>
