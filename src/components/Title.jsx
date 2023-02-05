@@ -13,7 +13,7 @@ const Title = ({ title }) => {
           exit={{ opacity: 0, x: -100 }}
           transition={{
             type: "tween",
-            duration: 0.5,
+            duration: 0.3,
             ease: "easeOut",
           }}
         >

@@ -10,7 +10,10 @@ import AnimatedRoutes from "./components/AnimatedRoutes";
 function App() {
   return (
     <div className="wrapper">
-      <div className="content">
+      <div
+        className="content"
+        // style={{ backgroundImage: `url("/img/mainback.jpg")` }}
+      >
         <img
           className="tuly_logo"
           src={process.env.PUBLIC_URL + "/img/logoTuly.svg"}

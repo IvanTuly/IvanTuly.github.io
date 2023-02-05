@@ -1,119 +1,163 @@
-.iconsContainer {
-  display: flex;
-  flex-direction: column;
-}
-
-.iconImg {
-  width: 50px;
-}
-
-.macImg {
+.homeWrapper {
   width: 100%;
-}
-
-.homepage {
-  width: 100%;
-  height: 50%;
+  height: 100%;
 
   position: relative;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  cursor: grab;
 }
 
-.css {
-  position: absolute;
-  top: 30%;
-  left: 70%;
-  width: 15%;
-  z-index: 1;
-}
-
-.firebase {
-  position: absolute;
-  top: 80%;
-  left: 10%;
-  width: 15%;
-}
-
-.git {
-  position: absolute;
-  top: 30%;
-  left: 5%;
-  width: 10%;
-}
-
-.html {
-  position: absolute;
-  top: 15%;
-  left: 40%;
-  width: 17%;
-}
-
-.js {
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  width: 15%;
-}
-
-.lodash {
-  position: absolute;
-  top: 90%;
-  left: 70%;
-  width: 20%;
-}
-
-.node {
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  width: 12%;
-}
-
-.react {
-  position: absolute;
-  top: 80%;
-  left: 39%;
-  width: 22%;
-}
-
-.redux {
-  position: absolute;
-  top: 0;
-  left: 30%;
-  width: 12%;
-}
-
-.restApi {
+.homeContent {
+  width: 170%;
+  height: 90%;
   position: absolute;
   top: 5%;
-  left: 5%;
-  width: 10%;
+  left: -50%;
 }
 
-.sass {
-  position: absolute;
-  top: 4%;
-  left: 80%;
-  width: 10%;
+@media (min-width: 501px) and (max-width: 850px) {
+  .homeContent {
+    width: 120%;
+    height: 70%;
+    position: absolute;
+    top: 10%;
+    left: -20%;
+  }
 }
 
-.ts {
-  position: absolute;
-  top: 60%;
-  left: 60%;
-  width: 17%;
-  z-index: 1;
+@media (max-width: 500px) {
+  .homeContent {
+    width: 120%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: -10%;
+  }
 }
+// .iconsContainer {
+//   display: flex;
+//   flex-direction: column;
+//   z-index: 1;
 
-.typingAnimation {
-  position: absolute;
-  top: 35%;
-  left: 20%;
-  width: 55%;
-  z-index: 0;
-}
+//   :hover {
+//     transform: rotateY(15deg);
+//   }
+// }
+
+// .iconImg {
+//   width: 50px;
+// }
+
+// .macImg {
+//   width: 100%;
+// }
+
+// .homepage {
+//   perspective: 1000px;
+
+//   width: 100%;
+//   height: 50%;
+
+//   position: relative;
+
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   cursor: grab;
+// }
+
+// .css {
+//   position: absolute;
+//   top: 30%;
+//   left: 75%;
+//   width: 15%;
+//   transform: translateZ(10px);
+// }
+
+// .firebase {
+//   position: absolute;
+//   top: 85%;
+//   left: 10%;
+//   width: 18%;
+//   transform: translateZ(10000px);
+// }
+
+// .git {
+//   position: absolute;
+//   top: 30%;
+//   left: 5%;
+//   width: 10%;
+//   transform: translateZ(10000px);
+// }
+
+// .html {
+//   position: absolute;
+//   top: 12%;
+//   left: 40%;
+//   width: 17%;
+//   transform: translateZ(1000px);
+// }
+
+// .js {
+//   position: absolute;
+//   top: 55%;
+//   left: 18%;
+//   width: 15%;
+// }
+
+// .lodash {
+//   position: absolute;
+//   top: 90%;
+//   left: 70%;
+//   width: 20%;
+// }
+
+// .node {
+//   position: absolute;
+//   top: -5%;
+//   left: 55%;
+//   width: 18%;
+// }
+
+// .react {
+//   position: absolute;
+//   top: 80%;
+//   left: 39%;
+//   width: 22%;
+// }
+
+// .redux {
+//   position: absolute;
+//   top: -8%;
+//   left: 30%;
+//   width: 12%;
+// }
+
+// .restApi {
+//   position: absolute;
+//   top: 5%;
+//   left: -5%;
+//   width: 15%;
+// }
+
+// .sass {
+//   position: absolute;
+//   top: 0%;
+//   left: 80%;
+//   width: 12%;
+// }
+
+// .ts {
+//   position: absolute;
+//   top: 60%;
+//   left: 60%;
+//   width: 17%;
+//   z-index: 1;
+// }
+
+// .typingAnimation {
+//   position: absolute;
+//   top: 35%;
+//   left: 20%;
+//   width: 55%;
+//   z-index: 0;
+// }
