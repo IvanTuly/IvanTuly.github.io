@@ -187,7 +187,7 @@
 
   .pageinfo {
     overflow: auto;
-    margin: 0 40px 0 40px;
+    margin: 0;
     display: flex;
     justify-content: start;
   }
@@ -213,13 +213,13 @@
     &__items {
       z-index: 2;
       position: fixed;
-      top: 0;
-      left: 0;
+      top: 0%;
+      left: 0%;
       height: 100%;
       width: 100%;
       background-color: rgb(64, 64, 64);
       transition: 0.7s;
-      transform: translateY(-100vh);
+      transform: translateY(-110vh);
       border-right: none;
 
       font-size: 25px;

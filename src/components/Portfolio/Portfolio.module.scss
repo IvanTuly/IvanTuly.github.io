@@ -81,23 +81,31 @@
   .portfolioCard {
     margin-top: 10vh;
     .imageTitle {
+      margin-left: 20px;
       width: 200px;
     }
 
     .subTitle {
-      margin-bottom: 2vh;
+      margin: 0 20px 2vh 20px;
 
       font-size: 16px;
       line-height: 1.2vw;
     }
 
     .techStack {
+      margin-left: 20px;
+      margin-right: 20px;
       .techStackItem {
         font-size: 14px;
         line-height: 12px;
 
         margin-bottom: 1vh;
       }
+    }
+
+    .imageMac {
+      margin-left: 30%;
+      width: 100vw;
     }
   }
 
@@ -108,16 +116,16 @@
 
   .prev {
     top: 20px;
-    right: 40px;
+    right: 50px;
   }
   .next {
     top: 20px;
-    right: 15px;
+    right: 21px;
   }
 
   .page_counter {
     top: 26px;
-    left: 15px;
+    left: 42px;
 
     font-size: 12px;
     letter-spacing: 5px;

@@ -103,6 +103,8 @@ const Portfolio = () => {
           backgroundImage: `url(${
             process.env.PUBLIC_URL + works[slideIndex - 1].backgroundImage
           })`,
+          backgroundSize: "cover",
+          overflow: "hidden",
         }}
         className="pageinfo"
         initial={{ opacity: 0, y: "100%" }}
