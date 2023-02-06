@@ -5,7 +5,7 @@ const Menu = () => {
   const navRef = React.useRef();
 
   const [width, setWidth] = React.useState(window.innerWidth);
-  const breakpoint = 700;
+  const breakpoint = 500;
   React.useEffect(() => {
     const handleResizeWindow = () => setWidth(window.innerWidth);
     // subscribe to window resize event "onComponentDidMount"

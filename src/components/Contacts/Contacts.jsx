@@ -49,6 +49,9 @@ const Contacts = () => {
       <Title title={"My Contacts"} />
       <motion.div
         className="pageinfo"
+        style={{
+          overflow: "hidden",
+        }}
         initial={{ opacity: 0, y: "100%" }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: "-100%" }}
