@@ -46,7 +46,7 @@ const Home = () => {
           <div className={styles.homeContent}>
             {mounted && (
               <Spline
-                scene="https://prod.spline.design/mk-jhKI58ef9l8PQ/scene.splinecode"
+                scene="https://prod.spline.design/M9oKBpkzXEpONiH4/scene.splinecode"
                 onLoad={onLoad}
               />
             )}
