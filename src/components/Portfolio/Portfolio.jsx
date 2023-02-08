@@ -107,7 +107,7 @@ const Portfolio = () => {
               target="_blank"
               className={styles.demoLink}
             >
-              Live demo
+              {`< Live Demo >`}
             </a>
 
             <img
