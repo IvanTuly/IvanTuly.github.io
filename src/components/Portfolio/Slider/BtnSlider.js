@@ -1,9 +1,6 @@
 import React from "react";
 import styles from "../Portfolio.module.scss";
 
-import leftArrow from "./icons/left-arrow.svg";
-import rightArrow from "./icons/right-arrow.svg";
-
 export default function BtnSlider({ direction, moveSlide }) {
   return (
     <button
@@ -14,7 +11,7 @@ export default function BtnSlider({ direction, moveSlide }) {
           : `${styles.btn_slide} ${styles.prev}`
       }
     >
-      <img src={direction === "next" ? rightArrow : leftArrow} alt="button" />
+      {direction === "next" ? ">" : "<"}
     </button>
   );
 }

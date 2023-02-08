@@ -5,49 +5,7 @@ import Title from "../Title";
 import BtnSlider from "./Slider/BtnSlider";
 import Counter from "./Counter";
 import styles from "./Portfolio.module.scss";
-
-const works = [
-  {
-    titleImg: "/img/pizzaDelivery/title.svg",
-    projectImg: "/img/pizzaDelivery/mac.png",
-    backgroundImage: "/img/pizzaDelivery/background.png",
-    techStack: [
-      "ReactJS",
-      "Redux Toolkit",
-      "React Router",
-      "Axios",
-      "React Content Loader",
-      "React Pagination",
-      "Lodash.Debounce",
-      "Sass",
-    ],
-  },
-  {
-    titleImg: "/img/reactSneakers/title.svg",
-    projectImg: "/img/reactSneakers/mac.png",
-    backgroundImage: "/img/reactSneakers/background2.png",
-    techStack: [
-      "ReactJS",
-      "Redux Toolkit",
-      "React Router",
-      "Axios",
-      "React Content Loader",
-      "css-modules",
-    ],
-  },
-  {
-    titleImg: "/img/taskList/title.svg",
-    projectImg: "/img/taskList/mac.png",
-    backgroundImage: "/img/taskList/background.svg",
-    techStack: [
-      "Vanilla JS",
-      "Scss",
-      "Drag & Drop ",
-      "Firebase RealTime",
-      "Firebase Auth",
-    ],
-  },
-];
+import { AppContext } from "../../App";
 
 const variants = {
   initial: (direction) => {
@@ -74,6 +32,8 @@ const variants = {
 };
 
 const Portfolio = () => {
+  const { portfolioData } = React.useContext(AppContext);
+
   //slider Index
   const [slideIndex, setSlideIndex] = React.useState(1);
   //slider direction
@@ -82,7 +42,7 @@ const Portfolio = () => {
   const nextSlide = () => {
     //1-next step
     setDirection(1);
-    slideIndex !== works.length
+    slideIndex !== portfolioData.length
       ? setSlideIndex(slideIndex + 1)
       : setSlideIndex(1);
   };
@@ -92,7 +52,7 @@ const Portfolio = () => {
     setDirection(-1);
     slideIndex !== 1
       ? setSlideIndex(slideIndex - 1)
-      : setSlideIndex(works.length);
+      : setSlideIndex(portfolioData.length);
   };
 
   return (
@@ -101,7 +61,8 @@ const Portfolio = () => {
       <motion.div
         style={{
           backgroundImage: `url(${
-            process.env.PUBLIC_URL + works[slideIndex - 1].backgroundImage
+            process.env.PUBLIC_URL +
+            portfolioData[slideIndex - 1].backgroundImage
           })`,
           backgroundSize: "cover",
           overflow: "hidden",
@@ -125,29 +86,43 @@ const Portfolio = () => {
             exit="exit"
             transition="transition"
             custom={direction}
-            key={works[slideIndex - 1].img}
+            key={portfolioData[slideIndex - 1].img}
           >
             <img
               className={styles.imageTitle}
-              src={process.env.PUBLIC_URL + works[slideIndex - 1].titleImg}
+              src={portfolioData[slideIndex - 1].titleImg}
               alt="Project title"
             />
             <div className={styles.subTitle}>Tech Stack:</div>
             <div className={styles.techStack}>
-              {works[slideIndex - 1].techStack.map((item) => (
-                <div className={styles.techStackItem}>{item}</div>
+              {portfolioData[slideIndex - 1].techStack.map((item, index) => (
+                <div key={index} className={styles.techStackItem}>
+                  {item}
+                </div>
               ))}
             </div>
+
+            <a
+              href={portfolioData[slideIndex - 1].link}
+              target="_blank"
+              className={styles.demoLink}
+            >
+              Live demo
+            </a>
+
             <img
               className={styles.imageMac}
-              src={process.env.PUBLIC_URL + works[slideIndex - 1].projectImg}
+              src={
+                process.env.PUBLIC_URL +
+                portfolioData[slideIndex - 1].projectImg
+              }
               alt="Project image"
             />
           </motion.div>
         </AnimatePresence>
         <BtnSlider moveSlide={nextSlide} direction={"next"} />
         <BtnSlider moveSlide={prevSlide} direction={"prev"} />
-        <Counter currentPage={slideIndex} totalPages={works.length} />
+        <Counter currentPage={slideIndex} totalPages={portfolioData.length} />
       </motion.div>
     </>
   );

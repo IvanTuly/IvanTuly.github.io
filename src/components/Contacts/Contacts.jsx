@@ -4,6 +4,8 @@ import Title from "../Title";
 
 import styles from "./Contacts.module.scss";
 import ContactElement from "./ContactElement";
+import axios from "axios";
+import { AppContext } from "../../App";
 
 const info = [
   {
@@ -44,6 +46,11 @@ const info = [
 ];
 
 const Contacts = () => {
+  const { contactsData } = React.useContext(AppContext);
+
+  // console.log(contactsData);
+  // console.log(info);
+
   return (
     <>
       <Title title={"My Contacts"} />
@@ -62,9 +69,7 @@ const Contacts = () => {
         }}
       >
         <div className={styles.items}>
-          {info.map((obj, index) => (
-            <ContactElement key={index} {...obj} />
-          ))}
+          <ContactElement obj={contactsData} />
         </div>
       </motion.div>
     </>
@@ -72,3 +77,12 @@ const Contacts = () => {
 };
 
 export default Contacts;
+
+// {
+//   contactsData.map((obj, index) => (
+//     <>
+//       {console.log(obj)}
+//       {/* <ContactElement key={index} {...obj} /> */}
+//     </>
+//   ));
+// }

@@ -20,7 +20,6 @@ const Home = () => {
 
   const onLoad = () => {
     setLoding(false);
-    console.log(loading);
   };
 
   return (

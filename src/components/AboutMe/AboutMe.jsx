@@ -4,42 +4,10 @@ import Title from "../Title";
 
 import styles from "./AboutMe.module.scss";
 import AboutMeElement from "./AboutMeElement";
+import { AppContext } from "../../App";
 
 const AboutMe = () => {
-  const info = [
-    {
-      header: "Education",
-      obj: [
-        {
-          title: "Computer Science - B.Sc.",
-          text: "The Bonch-Bruevich Saint Petersburg State University of Telecommunications, Information systems and technology",
-        },
-      ],
-    },
-    {
-      header: "Skills",
-      obj: [
-        {
-          title: "Web",
-          text: " HTML5, CSS (Sass), JavaScript (React, Redux, Flux), Rest APIs, Node JS, Databases (SQL)",
-        },
-      ],
-    },
-    {
-      header: "Expirience",
-      obj: [
-        {
-          title:
-            "Co-Founder, Developer \n Startup programix.pro - programing school for kids",
-          text: "Platform development (HTML,JS,CSS,PHP) SEO optimization Setup WooCommerce",
-        },
-        {
-          title: "Web developer at sun arch dance school",
-          text: "Website support, adding new pages, SEO optimization",
-        },
-      ],
-    },
-  ];
+  const { portfolioSkills } = React.useContext(AppContext);
 
   return (
     <>
@@ -56,7 +24,7 @@ const AboutMe = () => {
         }}
       >
         <div className={styles.items}>
-          {info.map((obj, index) => (
+          {portfolioSkills.map((obj, index) => (
             <AboutMeElement key={index} {...obj} />
           ))}
         </div>
