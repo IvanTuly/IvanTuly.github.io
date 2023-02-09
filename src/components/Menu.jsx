@@ -114,19 +114,18 @@ const Menu = () => {
 
       <div className="mobile-menu-dots">
         {navigation.map((obj, index) => (
-          <Link to={obj.link}>
-            <div
-              className={
-                obj.name === active
-                  ? "menu__item menu__items-home menu-active"
-                  : "menu__item menu__items-home"
-              }
-              onClick={() => {
-                setActive(obj.name);
-              }}
-            >
-              •
-            </div>
+          <Link
+            to={obj.link}
+            className={
+              obj.name === active
+                ? "menu__item menu__items-home menu-active"
+                : "menu__item menu__items-home"
+            }
+            onClick={() => {
+              setActive(obj.name);
+            }}
+          >
+            •
           </Link>
         ))}
       </div>
