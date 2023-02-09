@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "../Portfolio.module.scss";
+import ArrowIcon from "./ArrowIcon";
+import ArrowIconLeft from "./ArrowIconLeft";
 
 export default function BtnSlider({ direction, moveSlide }) {
   return (
@@ -11,7 +13,7 @@ export default function BtnSlider({ direction, moveSlide }) {
           : `${styles.btn_slide} ${styles.prev}`
       }
     >
-      {direction === "next" ? ">" : "<"}
+      {direction === "next" ? <ArrowIcon /> : <ArrowIconLeft />}
     </button>
   );
 }

@@ -12,7 +12,6 @@ const FooterItem = ({ icon, link, name }) => {
           name={icon}
         ></box-icon>
       </a>
-      {/* <p>{name}</p> */}
     </div>
   );
 };

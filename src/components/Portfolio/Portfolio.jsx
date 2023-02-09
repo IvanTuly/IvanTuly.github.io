@@ -6,6 +6,7 @@ import BtnSlider from "./Slider/BtnSlider";
 import Counter from "./Counter";
 import styles from "./Portfolio.module.scss";
 import { AppContext } from "../../App";
+import ArrowIcon from "./Slider/ArrowIcon";
 
 const variants = {
   initial: (direction) => {
@@ -107,7 +108,17 @@ const Portfolio = () => {
               target="_blank"
               className={styles.demoLink}
             >
-              {`< Live Demo >`}
+              {`Live Demo  `}
+              <ArrowIcon />
+              {/* <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="11"
+                viewBox="0 0 14 11"
+                fill="rgba(0, 0, 0, 1)"
+              >
+                <path d="M8.688 10.958l-.896-.875 3.5-3.5H.333v-1.25h10.959L7.77 1.813l.896-.875 5.02 5.02-5 5z"></path>
+              </svg> */}
             </a>
 
             <img

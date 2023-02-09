@@ -1,6 +1,6 @@
 .btn_slide {
-  width: 2vw;
-  height: 2vw;
+  width: 3vw;
+  height: 3vw;
 
   border: none;
   position: absolute;
@@ -10,6 +10,17 @@
   cursor: pointer;
   color: grey;
   font-size: 3vw;
+  svg {
+    fill: grey;
+    width: 2vw;
+    height: 1vw;
+  }
+}
+
+.btn_slide:hover {
+  svg {
+    fill: white;
+  }
 }
 
 .prev {
@@ -83,11 +94,29 @@
   }
 
   .demoLink {
+    display: flex;
+    align-items: center;
+
+    font-size: 1.2vw;
+    font-family: "Poppins", sans-serif;
     color: #fc440f;
     font-weight: 400;
+
+    svg {
+      margin-left: 0.2vw;
+
+      width: 2vw;
+      height: 1vw;
+
+      fill: #fc440f;
+    }
   }
   .demoLink:hover {
     color: white;
+
+    svg {
+      fill: white;
+    }
   }
 
   .imageMac {
@@ -124,7 +153,14 @@
     }
 
     .demoLink {
+      font-size: 14px;
       margin-left: 20px;
+
+      svg {
+        margin-left: 3px;
+        width: 20px;
+        height: 12px;
+      }
     }
 
     .imageMac {
@@ -137,14 +173,19 @@
     width: 32px;
     height: 32px;
     font-size: 24px;
+
+    svg {
+      width: 20px;
+      height: 14px;
+    }
   }
 
   .prev {
-    top: 16px;
+    top: 14px;
     right: 67px;
   }
   .next {
-    top: 16px;
+    top: 14px;
     right: 42px;
   }
 
@@ -178,16 +219,30 @@
         margin-bottom: 1vh;
       }
     }
+    .demoLink {
+      font-size: 12px;
+      margin-left: 0px;
+
+      svg {
+        margin-left: 3px;
+        width: 16px;
+        height: 10px;
+      }
+    }
   }
 
   .btn_slide {
     width: 24px;
     height: 24px;
+    svg {
+      width: 20px;
+      height: 14px;
+    }
   }
 
   .prev {
     top: 16px;
-    right: 40px;
+    right: 45px;
   }
   .next {
     top: 16px;
