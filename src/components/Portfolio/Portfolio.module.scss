@@ -129,13 +129,17 @@
 @media (max-width: 500px) {
   .portfolioCard {
     margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .imageTitle {
-      margin-left: 20px;
       width: 200px;
     }
 
     .subTitle {
-      margin: 0 20px 2vh 20px;
+      width: 100%;
+      margin-left: 40px;
+      margin-bottom: 2vh;
 
       font-size: 16px;
       line-height: 1.2vw;
@@ -153,8 +157,9 @@
     }
 
     .demoLink {
+      width: 100%;
       font-size: 14px;
-      margin-left: 20px;
+      margin-left: 40px;
 
       svg {
         margin-left: 3px;
@@ -181,16 +186,16 @@
 
   .prev {
     top: 14px;
-    right: 67px;
+    right: 46px;
   }
   .next {
     top: 14px;
-    right: 42px;
+    right: 17px;
   }
 
   .page_counter {
     top: 26px;
-    left: 42px;
+    left: 25px;
 
     font-size: 12px;
     letter-spacing: 5px;
